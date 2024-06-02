@@ -13,7 +13,7 @@ const router: Router = Router();
 // CRUD Operations
 
 router.post("/create", createUser);
-router.put("/update/:id", updateUser);
+router.put("/:id", updateUser);
 router.get("/:id", getUser);
 router.get("/", getAllUsers);
 router.delete("/:id", deleteUser);

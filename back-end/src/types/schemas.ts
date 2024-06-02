@@ -8,4 +8,11 @@ const userSchema = z.object({
   email: z.string().email(),
 });
 
-export { userSchema };
+const messageSchema = z.object({
+  text: z.string(),
+  time: z.string().time(),
+  owner: z.string(),
+  conversation: z.string(),
+});
+
+export { userSchema, messageSchema };

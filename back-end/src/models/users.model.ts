@@ -25,4 +25,4 @@ const userSchema = new Schema<IUser>({
 
 const User: Model<IUser> = model<IUser>("User", userSchema);
 
-export { UserDetails, IUser, User };
+export { IUser, User };
