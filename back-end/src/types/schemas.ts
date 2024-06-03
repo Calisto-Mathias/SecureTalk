@@ -15,4 +15,10 @@ const messageSchema = z.object({
   conversation: z.string(),
 });
 
-export { userSchema, messageSchema };
+const conversationSchema = z.object({
+  name: z.string(),
+  owners: z.array(z.string()),
+  messages: z.array(z.string()),
+});
+
+export { userSchema, messageSchema, conversationSchema };
