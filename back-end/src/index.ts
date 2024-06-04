@@ -26,6 +26,7 @@ app.use(express.json());
 
 const PORT: number = process.env.PORT as any as number;
 
+// CRUD AND AUTH
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
 app.use("/messages", messageRouter);

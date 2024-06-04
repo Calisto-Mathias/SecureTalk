@@ -1,9 +1,10 @@
-import { Model, Schema, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 import { Conversation } from "../types/types.js";
 
-type IConversation = Omit<Conversation, "owners" | "messages"> & {
-  owners: Array<Schema.Types.ObjectId>;
-  messages: Array<Schema.Types.ObjectId>;
+type IConversation = {
+  name: string;
+  owners: Array<Types.ObjectId>;
+  messages: Array<Types.ObjectId>;
 };
 
 const conversationSchema = new Schema<IConversation>({

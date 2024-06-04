@@ -1,9 +1,9 @@
-import { Schema, Model, model } from "mongoose";
+import { Schema, Model, model, Types } from "mongoose";
 
 import { UserDetails } from "../types/types.js";
 
 interface IUser extends UserDetails {
-  conversations?: Array<Schema.Types.ObjectId>;
+  conversations: Array<Types.ObjectId>;
   verificationStatus: boolean;
   onlineStatus: boolean;
 }
